@@ -1,0 +1,35 @@
+- Alles was in "" steht muss im Terminal, der sich im passenden directory befindet eingeben werden.
+
+- Projekt-Ordner erstellen
+- "npm init"
+- HTML erstellen
+- src-Ordner erstellen
+- index.ts erstellen
+- my-module.ts erstellen
+- build-Ordner erstellen
+- "tsc --init" 
+- tsconfig.json: 
+    "target": "es6", 
+    "outDir": "./bundle"
+    "rootDir": "./src"
+- "npm i rollup rollup-plugin-typescript2 typescript --save-dev"
+- rollup.config.js erstellen
+        // rollup.config.js
+        import typescript from "rollup-plugin-typescript2";
+
+        export default {
+            input: "./src/index.ts",
+            output: {
+                format: "iife",
+                file: "./build/bundle.js"
+            },
+            plugins: [
+                typescript({
+                    tsconfig: "./tsconfig.json"
+                })
+            ]
+        };
+- package.json: 
+    "scripts": {
+        "build": "rollup -c"
+    },
