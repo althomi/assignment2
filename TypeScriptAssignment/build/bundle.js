@@ -1,20 +1,14 @@
 (function () {
     'use strict';
 
-    const helloWorld = "Hello world";
-    class Beispiel extends HTMLElement {
+    const firstDefaultForm = "First default form successfull";
+    class DefaultForm extends HTMLElement {
         constructor() {
             super();
-            this.innerHTML = "<h1>Hello World</h1>";
         }
     }
 
-    function alertMe() {
-        alert("ATTENTION PLEASE");
-    }
-
-    console.log(helloWorld);
-    customElements.define('my-beispiel', Beispiel);
-    alertMe();
+    console.log(firstDefaultForm);
+    customElements.define('my-beispiel', DefaultForm);
 
 }());

@@ -1,8 +1,9 @@
-export const helloWorld: string = "Hello world";
+export const firstDefaultForm: string = "First default form successfull";
 
-export class Beispiel extends HTMLElement{
+
+export class DefaultForm extends HTMLElement{
     constructor(){
         super();
-        this.innerHTML = "<h1>Hello World</h1>";
     }
+
 }
