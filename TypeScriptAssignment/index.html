@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/default.css">
+    <title>Assignment2</title>
 </head>
 <body>
-    <my-beispiel></my-beispiel>
-    <script src="./build/bundle.js"></script>
+<section class="formulaBox">
+    <h1 class = "siteHeader">
+        Registrierung <br> Kundenkonto
+    </h1>
+    <section>
+        <section>
+            <form class = "defaultForm">
+                <input class = "name" placeholder="Vorname"/>
+            </form>
+        </section>
+        <section>
+            <form class = "defaultForm">
+                <input class = "surname" placeholder="Nachname"/>
+            </form>
+        </section>
+        <section>
+            <form class = "defaultForm">
+                <input class = "username" placeholder="Username"/>
+            </form>
+            <button class="tooltip">?</button>
+        </section>
+        <section>
+            <form class = "defaultForm">
+                <input class = "password" placeholder="Passwort"/>
+            </form>
+            <button class="tooltip">?</button>
+        </section>
+        <section>
+            <form class = "defaultForm">
+                <input class = "passwordcheck" placeholder="Passwort"/>
+            </form>
+
+        </section>
+    </section>
+    <section class="tooltipOpen">
+        <p>Ihr Username wird automatisch aus ihrem Vor- und Nachnamen zusammengesetzt</p>
+    </section>
+    <section class="tooltipOpen tooltipPasswort">
+        <p>Folgende Zeichen sind für das Passwort erlaubt: <br> A-Z, a-z, 0-9, Punkt</p>
+    </section>
+    <button class="buttonReg">Registrieren</button>
+</section>
+<script src="./build/bundle.js"></script>
 </body>
 </html>
