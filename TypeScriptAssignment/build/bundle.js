@@ -2,12 +2,8 @@
     'use strict';
 
     const firstDefaultForm = "First default form successfull";
-    /*const input1 = document.getElementById(`name`);
-    function typeName(name: string) {
-        return name;
-    }
-
-    function inputChecker() {
+    const input1 = document.getElementById(`name`);
+    /*function inputChecker() {
         if userinput = charsetString {
             console.log("correct message")
         }
@@ -15,7 +11,11 @@
             alert: wrong input
         }
 
-    }*/
+    }
+
+
+
+
     /*export class DefaultForm extends HTMLElement{
         public  length: number = 8;
         private charsetString: string[] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",

@@ -5,7 +5,7 @@ function typeName(name: string) {
     return name;
 }
 
-function inputChecker() {
+/*function inputChecker() {
     if userinput = charsetString {
         console.log("correct message")
     }
