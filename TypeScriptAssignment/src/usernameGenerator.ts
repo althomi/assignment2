@@ -16,4 +16,9 @@
 
     });
 
+    //add random number to username
+    function randomNumber() {
+        console.log(Math.random()*10)
+    }
+
 
