@@ -47,7 +47,7 @@ input{
 .buttonReg{
     display: block;
     position: relative;
-    top:-300px;
+    top:-100px;
     margin: 0 auto;
     width: 150px;
     height: 45px;
