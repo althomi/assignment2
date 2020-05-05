@@ -1,4 +1,4 @@
 "use strict";
 exports.__esModule = true;
-var myModule_1 = require("./myModule");
-console.log(myModule_1.firstDefaultForm);
+var defaultInputField_1 = require("./defaultInputField");
+console.log(defaultInputField_1.firstDefaultForm);
