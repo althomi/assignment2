@@ -1,11 +1,23 @@
 import {DefaultInputField} from './defaultInputField';
-export class UsernameGenerator extends DefaultInputField{
-    const button = document.getElementById('buttonReg') as HTMLButtonElement;
-    const input1 = document.getElementById('name') as HTMLInputElement;
-    const input2 = document.getElementById('surname') as HTMLInputElement;
-    const username = document.getElementById('username') as HTMLInputElement;
-    let random: number = Math.floor(Math.random() *10);
+export class UsernameGenerator extends DefaultInputField {
+    constructor() {
+        super();
+    };
+
+    var username = (document.getElementById('username') as HTMLInputElement).disabled = true;
+
+
+
+}
+
+
+
+    //const username = document.getElementById('username') as HTMLInputElement;
+    //this.username = document.getElementById('username').disabled = true;
+    /*let random: number = Math.floor(Math.random() *10);
     let userNameNumber;
+
+
 
 
 
@@ -16,15 +28,10 @@ export class UsernameGenerator extends DefaultInputField{
     //weist funktion typisiert einer variablen zu
     let userNameGen: (int: string, int2: string, randomNumb: number) => any;
 
-    button.addEventListener('click', function () {
-        console.log(addInput(input1.value, input2.value, random));
-        //document.getElementById('username').innerHTML = addInput();
-        //number: console.log()addInput(+input1.value, +input2.value)
 
-    });
 
     //add random number to username
     function randomNumber() {
     }
 }
-
+*/
