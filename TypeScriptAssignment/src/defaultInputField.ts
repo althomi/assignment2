@@ -1,9 +1,11 @@
-export const firstDefaultForm: string = "First default form successfull";
-
-const input1 = document.getElementById(`name`);
-function typeName(name: string) {
-    return name;
+export class DefaultInputField{
+   /* const input1 = document.getElementById(`name`);
+    function typeName(name: string) {
+        return name;
+    }*/
+    private firstDefaultForm: string = "First default form successfull";
 }
+
 
 /*function inputChecker() {
     if userinput = charsetString {
