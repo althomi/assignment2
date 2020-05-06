@@ -15,10 +15,13 @@
         <section>
             <form class = "defaultForm">
                 <input id="name" placeholder="Vorname"/>
+                <section>
+                    <p id="errorVorname"></p>
+                </section>
                 <input id="surname" placeholder="Nachname"/>
                 <input id="username" placeholder="Username"/>
                 <input class="password" placeholder="Passwort"/>
-                <input class="passwordcheck" placeholder="Passwort"/>
+                <input class="passwordcheck" placeholder="Passwort" oninput="lettersOnly"/>
                 <button class="buttonReg">Registrieren</button>
             </form>
         </section>
