@@ -1,4 +1,5 @@
-
+import {DefaultInputField} from './defaultInputField';
+export class UsernameGenerator extends DefaultInputField{
     const button = document.getElementById('buttonReg') as HTMLButtonElement;
     const input1 = document.getElementById('name') as HTMLInputElement;
     const input2 = document.getElementById('surname') as HTMLInputElement;
@@ -25,3 +26,5 @@
     //add random number to username
     function randomNumber() {
     }
+}
+
