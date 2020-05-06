@@ -1,24 +1,10 @@
 export class DefaultInputField extends HTMLInputElement{
-
     constructor() {
         super();
     }
-    
-    //input1: HTMLInputElement ;
-    //input2: HTMLInputElement;
+
     var input1 = document.getElementById('name')! as HTMLInputElement;
     var input2 = document.getElementById('surname')! as HTMLInputElement;
-
-    
-    /*constructor(input1: HTMLInputElement, input2: HTMLInputElement){
-    super();
-    this.input1 = input1;
-    this. input2 = input2;
-    }*/
-
-    /*eig ist der Konstruktor aber leer, weil er keine Eigenschaft hat oder?
-    
-    ################################################
 
 
 
