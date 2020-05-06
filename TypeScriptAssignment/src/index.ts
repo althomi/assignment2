@@ -1,6 +1,6 @@
 import {DefaultInputField} from './defaultInputField';
-import {PasswordInit} from "./passwordInit";
 import {UsernameGenerator} from "./usernameGenerator";
+import {PasswordInit} from "./passwordInit";
 import {PasswordCheck} from './passwordCheck';
 
 /*Struktur:

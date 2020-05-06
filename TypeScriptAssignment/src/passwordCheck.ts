@@ -1,5 +1,5 @@
 import {PasswordInit} from "./passwordInit";
 
-export PasswordCheck extends PasswordInit{
+export class PasswordCheck extends PasswordInit{
 
 }
