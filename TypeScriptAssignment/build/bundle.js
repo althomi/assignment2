@@ -1,13 +1,11 @@
 (function () {
     'use strict';
 
-    class UsernameGenerator extends DefaultInputField {
+    class UsernameGenerator {
         //Konstruktor
         constructor(int1, int2) {
-            super();
             this.int1 = int1;
             this.int2 = int2;
-            this.addInput();
         }
         ;
         //Methoden
@@ -24,10 +22,13 @@
 
     class DefaultInputField {
         constructor() {
-            this.usernameInput = document.getElementById("username");
-            this.usernameInput.addEventListener('blur', () => {
-                const newUsername = new UsernameGenerator('int1', 'int2').addInput();
+            this.generatedUsernameInput = document.getElementById("username");
+            this.firstUsername = document.getElementById("name");
+            this.surname = document.getElementById("surname");
+            this.surname.addEventListener('blur', () => {
+                const newUsername = new UsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
                 console.log(newUsername);
+                this.generatedUsernameInput.value = newUsername; //wert des inputsfeldes wird überschrieben
             });
         }
     }

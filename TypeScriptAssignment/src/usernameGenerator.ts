@@ -1,11 +1,7 @@
-import {DefaultInputField} from './defaultInputField';
-export class UsernameGenerator extends DefaultInputField {
+export class UsernameGenerator {
 
     //Konstruktor
     constructor(private int1: string, private int2: string) {
-        super();
-        this.addInput();
-
     };
 
     //Methoden
