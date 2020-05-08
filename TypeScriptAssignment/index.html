@@ -14,15 +14,15 @@
     </h1>
         <section>
             <form id = "defaultForm">
-                <input id="name" placeholder="Vorname"/>
-                <section hidden>
-                    <p id="errorVorname"></p>
-                </section>
-                <input id="surname" placeholder="Nachname" />
+                <input id="name" placeholder="Vorname" required/>
+                <input id="surname" placeholder="Nachname" required />
                 <input id="username" placeholder="Username" disabled/>
-                <input id="password" placeholder="Passwort" minlength="8" maxlength="8"/>
-                <input id="passwordcheck" placeholder="Passwort" minlength="8" maxlength="8"/>
-                <button id="buttonReg">Registrieren</button>
+                <input id="password" type="password" required placeholder="Passwort" minlength="5" maxlength="8"/>
+                <input id="passwordcheck" type="password" required placeholder="Passwort" minlength="5" maxlength="8"/>
+                <section id="errorPassword">
+                    <p>Überprüfen Sie Ihre Eingaben</p>
+                </section>
+                <button id="buttonReg" type="button">Registrieren</button>
             </form>
         </section>
 </section>

@@ -34,4 +34,36 @@
     }
     new DefaultInputField();
 
+    class PasswordCheck {
+        //private errorPassword: HTMLElement;
+        constructor() {
+        }
+        validatePassword(pass1, pass2) {
+            if (pass1 !== pass2) {
+                //this.errorPassword = (document.getElementById("errorPassword")!as HTMLElement).hidden=true;
+                alert("You failed");
+            }
+            else {
+                //this.errorPassword = (document.getElementById("errorPassword")! as HTMLElement).hidden=false;
+                //this.errorPassword.style.display=='none';
+                console.log("password correct");
+            }
+        }
+    }
+
+    class PasswordInit {
+        constructor() {
+            this.password1 = document.getElementById("password");
+            this.password2 = document.getElementById("passwordcheck");
+            this.registerButton = document.getElementById("buttonReg");
+            this.password2.addEventListener('blur', () => {
+                const passwortchecker = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+            });
+            this.registerButton.addEventListener('click', () => {
+                const passwortcheckerButton = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+            });
+        }
+    }
+    new PasswordInit();
+
 }());
