@@ -1,19 +1,22 @@
+export class UsernameGenerator {
 
-    const button = document.getElementById('buttonReg') as HTMLButtonElement;
-    const input1 = document.getElementById('name') as HTMLInputElement;
-    const input2 = document.getElementById('surname') as HTMLInputElement;
-    const username = document.getElementById('username') as HTMLInputElement;
+    //Konstruktor
+    constructor(private int1: string, private int2: string) {
+    };
 
-
-
-    function addInput(in1: string, in2: string) {
-        return in1 + in2
+    //Methoden
+    private getRandomInt(min: number, max: number): number {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    button.addEventListener('click', function () {
-        console.log(addInput(input1.value, input2.value));
-        //numer: console.log()addInput(+input1.value, +input2.value)
+    public addInput() {
+        console.log("username generated")
+        return this.int1 + this.int2 + this.getRandomInt(1,9);
+    }
 
-    });
-
+    //typisierung function
+    //private let userNameGen: (int1: string, int2: string, randomNumb: number) => any;
+}
 

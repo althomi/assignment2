@@ -1,41 +1,69 @@
 (function () {
     'use strict';
 
-    const firstDefaultForm = "First default form successfull";
-    const input1 = document.getElementById(`name`);
-    /*function inputChecker() {
-        if userinput = charsetString {
-            console.log("correct message")
+    class UsernameGenerator {
+        //Konstruktor
+        constructor(int1, int2) {
+            this.int1 = int1;
+            this.int2 = int2;
         }
-        else {
-            alert: wrong input
+        ;
+        //Methoden
+        getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
         }
-
+        addInput() {
+            console.log("username generated");
+            return this.int1 + this.int2 + this.getRandomInt(1, 9);
+        }
     }
 
-
-
-
-    /*export class DefaultForm extends HTMLElement{
-        public  length: number = 8;
-        private charsetString: string[] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
-            "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-            "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-        private charsetNumbers: number[] = [0,1,2,3,4,5,6,7,8,9];
-        private retVal: any = "";
-
-        constructor(inputClient: string){
-            super();
-            function typeName(){
-                private name = document.getElementById('name');
-
-
-            }
-
+    class DefaultInputField {
+        constructor() {
+            this.generatedUsernameInput = document.getElementById("username");
+            this.firstUsername = document.getElementById("name");
+            this.surname = document.getElementById("surname");
+            this.surname.addEventListener('blur', () => {
+                const newUsername = new UsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
+                console.log(newUsername);
+                this.generatedUsernameInput.value = newUsername; //wert des inputsfeldes wird überschrieben
+            });
         }
+    }
+    new DefaultInputField();
 
-    }*/
+    class PasswordCheck {
+        //private errorPassword: HTMLElement;
+        constructor() {
+        }
+        validatePassword(pass1, pass2) {
+            if (pass1 !== pass2) {
+                //this.errorPassword = (document.getElementById("errorPassword")!as HTMLElement).hidden=true;
+                alert("You failed");
+            }
+            else {
+                //this.errorPassword = (document.getElementById("errorPassword")! as HTMLElement).hidden=false;
+                //this.errorPassword.style.display=='none';
+                console.log("password correct");
+            }
+        }
+    }
 
-    console.log(firstDefaultForm);
+    class PasswordInit {
+        constructor() {
+            this.password1 = document.getElementById("password");
+            this.password2 = document.getElementById("passwordcheck");
+            this.registerButton = document.getElementById("buttonReg");
+            this.password2.addEventListener('blur', () => {
+                const passwortchecker = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+            });
+            this.registerButton.addEventListener('click', () => {
+                const passwortcheckerButton = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+            });
+        }
+    }
+    new PasswordInit();
 
 }());

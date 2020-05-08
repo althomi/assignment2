@@ -2,16 +2,6 @@ body{
     font-family: "Open Sans";
     background-image: url('../assets/background.jpg');
     color: #424242;
-
-}
-
-.formulaBox{
-    position: relative;
-    margin: 0 auto;
-    top: 80px;
-    width: 500px;
-    height: 650px;
-    background-color: rgba(213, 231, 242, 0.8);
 }
 
 form{
@@ -37,7 +27,16 @@ input{
     color: rgba(213, 231, 242, 0.7);
 }
 
-.siteHeader{
+#formulaBox{
+    position: relative;
+    margin: 0 auto;
+    top: 80px;
+    width: 500px;
+    height: 650px;
+    background-color: rgba(213, 231, 242, 0.8);
+}
+
+#siteHeader{
     font-size: 32px;
     position: relative;
     left: 150px;
@@ -45,7 +44,7 @@ input{
     padding-bottom: 30px;
 }
 
-.buttonReg{
+#buttonReg{
     display: block;
     position: relative;
     margin: 0 auto;
@@ -55,4 +54,8 @@ input{
     margin-top: 20px;
     background-color: darkblue;
     color: rgb(213, 231, 242);
+}
+
+#errorVorname{
+    display: none;
 }
