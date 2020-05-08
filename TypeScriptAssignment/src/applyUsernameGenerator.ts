@@ -1,5 +1,5 @@
-import {UsernameGenerator} from './usernameGenerator';
-export class DefaultInputField {
+import {MethodsUsernameGenerator} from './methodsUsernameGenerator';
+export class ApplyUsernameGenerator {
 
     private generatedUsernameInput: HTMLInputElement;  //spezieller typ
     private firstUsername: HTMLInputElement;
@@ -9,7 +9,7 @@ export class DefaultInputField {
         this.firstUsername= document.getElementById("name")! as HTMLInputElement;
         this.surname= document.getElementById("surname")! as HTMLInputElement;
         this.surname.addEventListener('blur', () => {
-            const newUsername = new UsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
+            const newUsername = new MethodsUsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
             console.log(newUsername);
             this.generatedUsernameInput.value = newUsername; //wert des inputsfeldes wird überschrieben
         })
@@ -18,4 +18,4 @@ export class DefaultInputField {
 
 }
 
-new DefaultInputField();
+new ApplyUsernameGenerator();
