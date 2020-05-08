@@ -1,8 +1,8 @@
 "use strict";
 exports.__esModule = true;
-var PasswordInit = /** @class */ (function () {
+var ApplyPasswordCheck = /** @class */ (function () {
     function PasswordInit() {
     }
     return PasswordInit;
 }());
-exports.PasswordInit = PasswordInit;
+exports.PasswordInit = ApplyPasswordCheck;

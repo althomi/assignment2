@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var usernameGenerator_1 = require("./usernameGenerator");
-var DefaultInputField = /** @class */ (function (_super) {
+var ApplyUsernameGenerator = /** @class */ (function (_super) {
     __extends(DefaultInputField, _super);
     function DefaultInputField() {
         var _this = _super.call(this) || this;
@@ -27,7 +27,7 @@ var DefaultInputField = /** @class */ (function (_super) {
     }
     return DefaultInputField;
 }(HTMLInputElement));
-exports.DefaultInputField = DefaultInputField;
+exports.DefaultInputField = ApplyUsernameGenerator;
 /*function lettersOnly(){
     if ( this.input1.value != this.regexLetters)
         document.getElementById("errorVorname").innerHTML="Folgende Zeichen sind erlaubt um deinen Namen zu schreiben: A-Z, a-z.");*/
