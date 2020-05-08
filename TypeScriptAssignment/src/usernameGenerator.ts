@@ -2,8 +2,10 @@ import {DefaultInputField} from './defaultInputField';
 export class UsernameGenerator extends DefaultInputField {
 
     //Konstruktor
-    constructor() {
+    constructor(private int1: string, private int2: string) {
         super();
+        this.addInput();
+
     };
 
     //Methoden
@@ -12,15 +14,13 @@ export class UsernameGenerator extends DefaultInputField {
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min;
     }
-    
-    private addInput(in1: string, in2: string) {
+
+    public addInput() {
         console.log("username generated")
-        return in1 + in2 + this.getRandomInt(1,9);
+        return this.int1 + this.int2 + this.getRandomInt(1,9);
     }
+
+    //typisierung function
+    //private let userNameGen: (int1: string, int2: string, randomNumb: number) => any;
 }
-
-
-    //typisierung function output
-    //var userNameGen: (int: string, int2: string, randomNumb: number) => any;
-
 
