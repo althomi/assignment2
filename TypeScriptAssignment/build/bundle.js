@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    class UsernameGenerator {
+    class MethodsUsernameGenerator {
         //Konstruktor
         constructor(int1, int2) {
             this.int1 = int1;
@@ -20,21 +20,21 @@
         }
     }
 
-    class DefaultInputField {
+    class ApplyUsernameGenerator {
         constructor() {
             this.generatedUsernameInput = document.getElementById("username");
             this.firstUsername = document.getElementById("name");
             this.surname = document.getElementById("surname");
             this.surname.addEventListener('blur', () => {
-                const newUsername = new UsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
+                const newUsername = new MethodsUsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
                 console.log(newUsername);
                 this.generatedUsernameInput.value = newUsername; //wert des inputsfeldes wird überschrieben
             });
         }
     }
-    new DefaultInputField();
+    new ApplyUsernameGenerator();
 
-    class PasswordCheck {
+    class MethodsPasswordCheck {
         //private errorPassword: HTMLElement;
         constructor() {
         }
@@ -51,19 +51,19 @@
         }
     }
 
-    class PasswordInit {
+    class ApplyPasswordCheck {
         constructor() {
             this.password1 = document.getElementById("password");
             this.password2 = document.getElementById("passwordcheck");
             this.registerButton = document.getElementById("buttonReg");
             this.password2.addEventListener('blur', () => {
-                const passwortchecker = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+                const passwortchecker = new MethodsPasswordCheck().validatePassword(this.password1.value, this.password2.value);
             });
             this.registerButton.addEventListener('click', () => {
-                const passwortcheckerButton = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+                const passwortcheckerButton = new MethodsPasswordCheck().validatePassword(this.password1.value, this.password2.value);
             });
         }
     }
-    new PasswordInit();
+    new ApplyPasswordCheck();
 
 }());
