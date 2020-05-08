@@ -13,13 +13,16 @@
         Registrierung <br> Kundenkonto
     </h1>
         <section>
-            <form class = "defaultForm">
+            <form id = "defaultForm">
                 <input id="name" placeholder="Vorname"/>
-                <input id="surname" placeholder="Nachname"/>
-                <input id = "username" placeholder="Username"/>
-                <input class = "password" placeholder="Passwort"/>
-                <input class = "passwordcheck" placeholder="Passwort"/>
-                <button class="buttonReg">Registrieren</button>
+                <section>
+                    <p id="errorVorname"></p>
+                </section>
+                <input id="surname" placeholder="Nachname" />
+                <input id="username" placeholder="Username" disabled/>
+                <input id="password" placeholder="Passwort" minlength="8" maxlength="8"/>
+                <input id="passwordcheck" placeholder="Passwort" minlength="8" maxlength="8"/>
+                <button id="buttonReg">Registrieren</button>
             </form>
         </section>
 </section>
