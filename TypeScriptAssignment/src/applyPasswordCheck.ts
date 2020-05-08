@@ -1,6 +1,6 @@
-import {PasswordCheck} from "./passwordCheck";
+import {MethodsPasswordCheck} from "./methodsPasswordCheck";
 
-export class PasswordInit{
+export class ApplyPasswordCheck{
     private password1: HTMLInputElement;
     private password2: HTMLInputElement;
     private registerButton: HTMLButtonElement;
@@ -10,15 +10,15 @@ export class PasswordInit{
         this.password2 = document.getElementById("passwordcheck")! as HTMLInputElement;
         this.registerButton = document.getElementById("buttonReg")! as HTMLButtonElement;
         this.password2.addEventListener('blur', () => {
-            const passwortchecker = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+            const passwortchecker = new MethodsPasswordCheck().validatePassword(this.password1.value, this.password2.value);
         })
         this.registerButton.addEventListener('click', () => {
-            const passwortcheckerButton = new PasswordCheck().validatePassword(this.password1.value, this.password2.value);
+            const passwortcheckerButton = new MethodsPasswordCheck().validatePassword(this.password1.value, this.password2.value);
         })
 
-        new PasswordCheck();
+        new MethodsPasswordCheck();
     }
 
 }
 
-new PasswordInit();
+new ApplyPasswordCheck()

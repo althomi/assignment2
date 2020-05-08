@@ -14,11 +14,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var passwordInit_1 = require("./passwordInit");
-var PasswordCheck = /** @class */ (function (_super) {
+var MethodsPasswordCheck = /** @class */ (function (_super) {
     __extends(PasswordCheck, _super);
     function PasswordCheck() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return PasswordCheck;
 }(passwordInit_1.PasswordInit));
-exports.PasswordCheck = PasswordCheck;
+exports.PasswordCheck = MethodsPasswordCheck;

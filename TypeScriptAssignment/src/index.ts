@@ -1,2 +1,2 @@
-import './defaultInputField';
-import './passwordInit';
+import './applyUsernameGenerator';
+import './applyPasswordCheck';

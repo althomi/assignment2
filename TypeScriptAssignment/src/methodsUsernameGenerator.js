@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var defaultInputField_1 = require("./defaultInputField");
-var UsernameGenerator = /** @class */ (function (_super) {
+var MethodsUsernameGenerator = /** @class */ (function (_super) {
     __extends(UsernameGenerator, _super);
     //Konstruktor
     function UsernameGenerator(int1, int2) {
@@ -37,4 +37,4 @@ var UsernameGenerator = /** @class */ (function (_super) {
     };
     return UsernameGenerator;
 }(defaultInputField_1.DefaultInputField));
-exports.UsernameGenerator = UsernameGenerator;
+exports.UsernameGenerator = MethodsUsernameGenerator;
