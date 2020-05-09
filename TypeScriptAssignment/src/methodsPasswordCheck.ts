@@ -1,4 +1,4 @@
-export class PasswordCheck{
+export class MethodsPasswordCheck{
     //private errorPassword: HTMLElement;
     constructor() {
     }

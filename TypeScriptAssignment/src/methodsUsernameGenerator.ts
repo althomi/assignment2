@@ -1,4 +1,4 @@
-export class UsernameGenerator {
+export class MethodsUsernameGenerator {
 
     //Konstruktor
     constructor(private int1: string, private int2: string) {
@@ -15,8 +15,5 @@ export class UsernameGenerator {
         console.log("username generated")
         return this.int1 + this.int2 + this.getRandomInt(1,9);
     }
-
-    //typisierung function
-    //private let userNameGen: (int1: string, int2: string, randomNumb: number) => any;
 }
 
