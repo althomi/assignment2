@@ -9,14 +9,14 @@
         }
         ;
         //Methoden
-        getRandomInt(min, max) {
+        static getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min)) + min;
         }
         addInput() {
             console.log("username generated");
-            return this.int1 + this.int2 + this.getRandomInt(1, 9);
+            return this.int1 + this.int2 + MethodsUsernameGenerator.getRandomInt(1, 9);
         }
     }
 
