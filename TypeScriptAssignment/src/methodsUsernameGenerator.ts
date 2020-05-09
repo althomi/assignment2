@@ -5,15 +5,15 @@ export class MethodsUsernameGenerator {
     };
 
     //Methoden
-    private getRandomInt(min: number, max: number): number {
+    private static getRandomInt(min: number, max: number): number {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
     public addInput() {
-        console.log("username generated")
-        return this.int1 + this.int2 + this.getRandomInt(1,9);
+        console.log("username generated");
+        return this.int1 + this.int2 + MethodsUsernameGenerator.getRandomInt(1,9);
     }
 }
 
