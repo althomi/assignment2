@@ -1,11 +1,11 @@
 export class MethodsUsernameGenerator {
 
     //Konstruktor
-    constructor(private int1: string, private int2: string) {
+    constructor(private input1: string, private input2: string) {
     };
 
     //Methoden
-    private static getRandomInt(min: number, max: number): number {
+    private getRandomInt(min: number, max: number): number {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min;
@@ -13,7 +13,7 @@ export class MethodsUsernameGenerator {
 
     public addInput() {
         console.log("username generated");
-        return this.int1 + this.int2 + MethodsUsernameGenerator.getRandomInt(1,9);
+        return this.input1 + this.input2 + this.getRandomInt(1,9);
     }
 }
 
