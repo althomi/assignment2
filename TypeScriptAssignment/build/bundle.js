@@ -9,14 +9,14 @@
         }
         ;
         //Methoden
-        getRandomInt(min, max) {
+        static getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min)) + min;
         }
         addInput() {
             console.log("username generated");
-            return this.int1 + this.int2 + this.getRandomInt(1, 9);
+            return this.int1 + this.int2 + MethodsUsernameGenerator.getRandomInt(1, 9);
         }
     }
 
@@ -35,18 +35,23 @@
     new ApplyUsernameGenerator();
 
     class MethodsPasswordCheck {
-        //private errorPassword: HTMLElement;
         constructor() {
+            this.errorPassword = document.getElementById('errorPassword');
+            this.correctPassword = document.getElementById('correctPassword');
+            this.buttonReg = document.getElementById('buttonReg');
         }
         validatePassword(pass1, pass2) {
             if (pass1 !== pass2) {
-                //this.errorPassword = (document.getElementById("errorPassword")!as HTMLElement).hidden=true;
-                alert("You failed");
+                this.errorPassword.style.display = 'block';
+                this.correctPassword.style.display = 'none';
+                this.buttonReg.type = 'button';
+                console.log("passwordcheck: incorrect passwords");
             }
             else {
-                //this.errorPassword = (document.getElementById("errorPassword")! as HTMLElement).hidden=false;
-                //this.errorPassword.style.display=='none';
-                console.log("password correct");
+                this.correctPassword.style.display = 'block';
+                this.errorPassword.style.display = 'none';
+                this.buttonReg.type = 'submit';
+                console.log("passwordcheck: correct passwords");
             }
         }
     }
@@ -62,6 +67,7 @@
             this.registerButton.addEventListener('click', () => {
                 const passwortcheckerButton = new MethodsPasswordCheck().validatePassword(this.password1.value, this.password2.value);
             });
+            new MethodsPasswordCheck();
         }
     }
     new ApplyPasswordCheck();
