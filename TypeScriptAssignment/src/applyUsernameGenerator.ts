@@ -10,7 +10,7 @@ export class ApplyUsernameGenerator {
         this.surname= document.getElementById("surname")! as HTMLInputElement;
         this.surname.addEventListener('blur', () => {
             const newUsername = new MethodsUsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
-            console.log(newUsername);
+            //console.log(newUsername);
             this.generatedUsernameInput.value = newUsername; //wert des inputsfeldes wird überschrieben
         })
     }
