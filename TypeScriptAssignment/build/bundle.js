@@ -1,6 +1,39 @@
 (function () {
     'use strict';
 
+    class MethodsUsernameGenerator {
+        //Konstruktor
+        constructor(input1, input2) {
+            this.input1 = input1;
+            this.input2 = input2;
+        }
+        ;
+        //Methoden
+        getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        addInput() {
+            console.log("username generated");
+            return this.input1 + this.input2 + this.getRandomInt(1, 9);
+        }
+    }
+
+    class ApplyUsernameGenerator {
+        constructor() {
+            this.generatedUsernameInput = document.getElementById("username");
+            this.firstUsername = document.getElementById("name");
+            this.surname = document.getElementById("surname");
+            this.surname.addEventListener('blur', () => {
+                const newUsername = new MethodsUsernameGenerator(this.firstUsername.value, this.surname.value).addInput();
+                //console.log(newUsername);
+                this.generatedUsernameInput.value = newUsername; //wert des inputsfeldes wird überschrieben
+            });
+        }
+    }
+    new ApplyUsernameGenerator();
+
     class MethodsPasswordCheck {
         constructor() {
             this.errorPassword = document.getElementById('errorPassword');

@@ -16,3 +16,4 @@ export class ApplyUsernameGenerator {
     }
 
 }
+new ApplyUsernameGenerator();
