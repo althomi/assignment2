@@ -1,7 +1,7 @@
 export class MethodsPasswordCheck{
     private errorPassword: HTMLElement;
     private correctPassword: HTMLElement;
-    private buttonReg: HTMLButtonElement;
+    public buttonReg: HTMLButtonElement;
     constructor() {
         this.errorPassword = document.getElementById('errorPassword')!as HTMLElement;
         this.correctPassword = document.getElementById('correctPassword')!as HTMLElement;
@@ -14,7 +14,6 @@ export class MethodsPasswordCheck{
         this.correctPassword.style.display='none';
         this.buttonReg.type='button';
         //console.log("passwordcheck: incorrect passwords")
-
         } else {
             this.correctPassword.style.display='block';
             this.errorPassword.style.display='none';

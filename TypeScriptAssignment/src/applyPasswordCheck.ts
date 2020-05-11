@@ -13,7 +13,7 @@ export class ApplyPasswordCheck{
             new MethodsPasswordCheck().validatePassword(this.password1.value, this.password2.value);
         });
 
-        new MethodsPasswordCheck();
     }
 
 }
+new ApplyPasswordCheck();
